@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuration du compte — Vigie BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<body>
+<div class="onboarding" data-wizard data-finish-url="dashboard.html">
+
+  <div class="onboarding__top">
+    <a href="index.html" class="brand"><span class="brand__mark"></span> Vigie BC</a>
+    <a href="dashboard.html" class="onboarding__skip-all">Passer la configuration →</a>
+  </div>
+
+  <div class="wizard-steps">
+    <div class="wizard-step is-active">
+      <div class="wizard-step__dot">1</div>
+      <div class="wizard-step__label">Thématiques</div>
+    </div>
+    <div class="wizard-step__line"></div>
+    <div class="wizard-step">
+      <div class="wizard-step__dot">2</div>
+      <div class="wizard-step__label">Villes</div>
+    </div>
+    <div class="wizard-step__line"></div>
+    <div class="wizard-step">
+      <div class="wizard-step__dot">3</div>
+      <div class="wizard-step__label">Mots-clés</div>
+    </div>
+  </div>
+
+  <div class="onboarding__body">
+    <div class="wizard-card">
+
+      <!-- Step 1 — Topics -->
+      <div class="wizard-panel is-active">
+        <div class="eyebrow">Étape 1 sur 3</div>
+        <h2>Quels types de BC vous intéressent ?</h2>
+        <p>Sélectionnez une ou plusieurs thématiques. Vous pourrez les modifier plus tard depuis votre profil.</p>
+        <div class="option-grid" data-selectable>
+          <div class="option-pill selected"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Informatique</div>
+          <div class="option-pill"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Travaux</div>
+          <div class="option-pill selected"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Sécurité</div>
+          <div class="option-pill"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Électricité</div>
+          <div class="option-pill"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Transport</div>
+          <div class="option-pill"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Fournitures de bureau</div>
+          <div class="option-pill"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Santé</div>
+          <div class="option-pill"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Nettoyage</div>
+        </div>
+        <span class="wizard-selected-count" data-selected-count>2 sélections</span>
+        <div class="wizard-footer">
+          <button class="btn btn-ghost" data-wizard-skip>Passer cette étape</button>
+          <button class="btn btn-primary" data-wizard-next>Continuer</button>
+        </div>
+      </div>
+
+      <!-- Step 2 — Cities -->
+      <div class="wizard-panel">
+        <div class="eyebrow">Étape 2 sur 3</div>
+        <h2>Dans quelles villes cherchez-vous des opportunités ?</h2>
+        <p>Nous ne vous alerterons que pour les BC publiés dans ces régions.</p>
+        <div class="search-box" style="max-width:none;margin-bottom:14px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" placeholder="Rechercher une ville…" data-option-search="[data-city-list]">
+        </div>
+        <div class="option-list" data-selectable data-city-list>
+          <div class="option-row selected" data-option-name="Casablanca"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Casablanca</span></div>
+          <div class="option-row selected" data-option-name="Rabat"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Rabat</span></div>
+          <div class="option-row" data-option-name="Tanger"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Tanger</span></div>
+          <div class="option-row" data-option-name="Fès"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Fès</span></div>
+          <div class="option-row" data-option-name="Marrakech"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Marrakech</span></div>
+          <div class="option-row" data-option-name="Agadir"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Agadir</span></div>
+          <div class="option-row" data-option-name="Meknès"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Meknès</span></div>
+          <div class="option-row" data-option-name="Oujda"><span class="check"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span><span>Oujda</span></div>
+        </div>
+        <span class="wizard-selected-count" data-selected-count>2 sélections</span>
+        <div class="wizard-footer">
+          <button class="btn btn-outline" data-wizard-back>Retour</button>
+          <div style="display:flex;gap:10px;">
+            <button class="btn btn-ghost" data-wizard-skip>Passer cette étape</button>
+            <button class="btn btn-primary" data-wizard-next>Continuer</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 — Keywords -->
+      <div class="wizard-panel">
+        <div class="eyebrow">Étape 3 sur 3</div>
+        <h2>Ajoutez des mots-clés précis</h2>
+        <p>Affinez encore la détection avec des termes liés à votre activité.</p>
+        <div class="search-box" style="max-width:none;margin-bottom:14px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" placeholder="Rechercher un mot-clé suggéré…" data-option-search="[data-keyword-list]">
+        </div>
+        <div class="option-grid" data-selectable data-keyword-list style="margin-bottom:20px;">
+          <div class="option-pill selected" data-option-name="Dell"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Dell</div>
+          <div class="option-pill selected" data-option-name="Cisco"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Cisco</div>
+          <div class="option-pill" data-option-name="Windows"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Windows</div>
+          <div class="option-pill" data-option-name="Serveur"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Serveur</div>
+          <div class="option-pill" data-option-name="Maintenance"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Maintenance</div>
+          <div class="option-pill" data-option-name="Fibre optique"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Fibre optique</div>
+          <div class="option-pill" data-option-name="Imprimante"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Imprimante</div>
+          <div class="option-pill" data-option-name="Réseau"><span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> Réseau</div>
+        </div>
+        <div class="field">
+          <label>Ajouter votre propre mot-clé</label>
+          <div class="tag-input-row">
+            <input type="text" placeholder="Ex : « onduleur », « câblage »…" data-custom-keyword-input>
+            <button class="btn btn-outline" type="button" data-custom-keyword-add>Ajouter</button>
+          </div>
+          <div class="match-tags" style="margin-top:12px;" data-custom-keyword-chips></div>
+        </div>
+        <div class="wizard-footer">
+          <button class="btn btn-outline" data-wizard-back>Retour</button>
+          <button class="btn btn-primary" data-wizard-next>Terminer la configuration</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+ <script src="/js/Scripts_more.js"></script>
+</body>
+</html>

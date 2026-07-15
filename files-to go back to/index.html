@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vigie BC — La vigie des bons de commande publics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="ticker">
+  <div class="ticker__track">
+    <span class="ticker__item"><span class="dot"></span> <b>AOO-2026-11042</b> — Fourniture de matériel informatique — Rabat</span>
+    <span class="ticker__item"><span class="dot"></span> <b>BC-2026-00873</b> — Travaux de peinture bâtiment — Casablanca</span>
+    <span class="ticker__item"><span class="dot"></span> <b>DAO-2026-00291</b> — Maintenance de véhicules — Fès</span>
+    <span class="ticker__item"><span class="dot"></span> <b>AOO-2026-11055</b> — Fournitures de bureau — Tanger</span>
+    <span class="ticker__item"><span class="dot"></span> <b>BC-2026-00881</b> — Équipement médical — Marrakech</span>
+    <span class="ticker__item"><span class="dot"></span> <b>AOO-2026-11042</b> — Fourniture de matériel informatique — Rabat</span>
+    <span class="ticker__item"><span class="dot"></span> <b>BC-2026-00873</b> — Travaux de peinture bâtiment — Casablanca</span>
+    <span class="ticker__item"><span class="dot"></span> <b>DAO-2026-00291</b> — Maintenance de véhicules — Fès</span>
+    <span class="ticker__item"><span class="dot"></span> <b>AOO-2026-11055</b> — Fournitures de bureau — Tanger</span>
+    <span class="ticker__item"><span class="dot"></span> <b>BC-2026-00881</b> — Équipement médical — Marrakech</span>
+  </div>
+</div>
+
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="brand"><span class="brand__mark"></span> Vigie BC</a>
+    <div class="nav__links">
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#comment-ca-marche">Comment ça marche</a>
+      <a href="#apercu">Aperçu</a>
+    </div>
+    <div class="nav__cta">
+      <a href="login.html" class="btn btn-ghost">Connexion</a>
+      <a href="register.html" class="btn btn-primary">Essayer gratuitement</a>
+    </div>
+    <button class="nav__toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__inner">
+    <div>
+      <div class="eyebrow">Surveillance automatisée · marchespublics.gov.ma</div>
+      <h1>Ne manquez plus <em>jamais</em> un bon de commande.</h1>
+      <p class="hero__lede">Vigie BC scanne le portail national des marchés publics 24h/24, filtre les consultations selon vos mots-clés, et vous alerte par email dès qu'une opportunité correspond à votre activité.</p>
+      <div class="hero__actions">
+        <a href="register.html" class="btn btn-primary">Créer un compte gratuit</a>
+        <a href="#comment-ca-marche" class="btn btn-outline">Voir comment ça marche</a>
+      </div>
+      <div class="hero__proof">
+        <div><strong data-count="1240">0</strong><span>BC scannés / jour</span></div>
+        <div><strong data-count="96" data-suffix="%">0%</strong><span>Détection sans doublon</span></div>
+        <div><strong data-count="15" data-suffix=" min">0 min</strong><span>Fréquence de scan</span></div>
+      </div>
+    </div>
+    <div class="radar" aria-hidden="true">
+      <div class="radar__ring radar__ring--1"></div>
+      <div class="radar__ring radar__ring--2"></div>
+      <div class="radar__ring radar__ring--3"></div>
+      <div class="radar__sweep"></div>
+      <div class="radar__dot" style="top:22%;left:64%;animation-delay:.2s;"></div>
+      <div class="radar__dot" style="top:58%;left:30%;animation-delay:1.1s;"></div>
+      <div class="radar__dot" style="top:70%;left:68%;animation-delay:1.8s;"></div>
+      <div class="radar__card">
+        <span class="tag-match">Correspondance</span>
+        <b>AOO-2026-11042</b>
+        Fourniture de matériel informatique — mot-clé « informatique »
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="comment-ca-marche">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="eyebrow" style="justify-content:center;">Le principe</div>
+      <h2>Quatre étapes, zéro effort manuel</h2>
+      <p>Une fois configurée, la plateforme travaille pour vous en continu.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step__num">01</div>
+        <h3>Définissez vos mots-clés</h3>
+        <p>Ajoutez les termes liés à votre activité : « informatique », « travaux », « fournitures médicales »…</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">02</div>
+        <h3>Le robot scanne le portail</h3>
+        <p>Notre moteur consulte périodiquement marchespublics.gov.ma et récupère les nouvelles consultations.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">03</div>
+        <h3>Filtrage & dédoublonnage</h3>
+        <p>Chaque BC est comparé à vos critères, sans jamais vous signaler deux fois la même consultation.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">04</div>
+        <h3>Alerte email instantanée</h3>
+        <p>Recevez une notification dès qu'une correspondance est détectée, avec le lien direct vers le BC.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ice" id="fonctionnalites">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="eyebrow" style="justify-content:center;">La plateforme</div>
+      <h2>Tout ce qu'il faut pour suivre les marchés publics</h2>
+      <p>Une interface pensée pour les entreprises qui répondent régulièrement à des appels d'offres.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        </div>
+        <h3>Tableau de bord</h3>
+        <p>Vue synthétique de vos BC suivis, alertes récentes et tendances de détection.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l-7-7a5 5 0 117-7 5 5 0 117 7l-7 7z"/></svg>
+        </div>
+        <h3>Mots-clés de surveillance</h3>
+        <p>Ajoutez, modifiez ou supprimez vos critères de recherche en quelques secondes.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </div>
+        <h3>BC en cours</h3>
+        <p>Liste complète des bons de commande récupérés, avec recherche, filtres et tri.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 7l-10 7L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        </div>
+        <h3>Alertes email</h3>
+        <p>Activez ou désactivez vos notifications, et choisissez leur fréquence.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Scan automatique</h3>
+        <p>Le moteur de scraping vérifie périodiquement le portail, sans aucune action de votre part.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+        </div>
+        <h3>Profil & équipe</h3>
+        <p>Gérez vos informations et vos préférences de compte à tout moment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="apercu">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="eyebrow" style="justify-content:center;">Aperçu</div>
+      <h2>Un tableau de bord clair, pensé pour l'action</h2>
+      <p>Visualisez en un coup d'œil vos indicateurs clés et vos dernières alertes.</p>
+    </div>
+    <div class="frame reveal">
+      <div class="frame__bar">
+        <span></span><span></span><span></span>
+        <span class="url">app.vigiebc.ma/dashboard</span>
+      </div>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop" alt="Aperçu du tableau de bord Vigie BC" style="width:100%;display:block;">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Prêt à ne plus surveiller le portail à la main ?</h2>
+      <p>Créez votre compte en une minute et configurez votre premier mot-clé dès aujourd'hui.</p>
+      <a href="register.html" class="btn btn-primary">Créer un compte gratuit</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;"><span class="brand__mark"></span> Vigie BC</a>
+        <p style="font-size:13.5px;max-width:260px;">La vigie automatisée des bons de commande publics marocains. Un produit WebHi Technology.</p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#comment-ca-marche">Comment ça marche</a>
+        <a href="#apercu">Aperçu</a>
+      </div>
+      <div>
+        <h4>Compte</h4>
+        <a href="login.html">Connexion</a>
+        <a href="register.html">Inscription</a>
+        <a href="forgot-password.html">Mot de passe oublié</a>
+      </div>
+      <div>
+        <h4>Application</h4>
+        <a href="dashboard.html">Tableau de bord</a>
+        <a href="bc-list.html">BC en cours</a>
+        <a href="keywords.html">Mots-clés</a>
+        <a href="alerts.html">Alertes</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 WebHi Technology SARL — Vigie BC</span>
+      <span>Source : marchespublics.gov.ma</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes filtres{% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mes filtres</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="/css/Styles_more.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<aside class="sidebar">
+
+<a href="{{ path('dashboard') }}" class="brand">
+<span class="brand__mark"></span>
+Vigie BC
+</a>
+
+<div class="sidebar__section">
+Navigation
+</div>
+
+<nav class="sidebar__nav">
+
+<a href="{{ path('dashboard') }}">
+Tableau de bord
+</a>
+
+<a href="{{ path('app_bc_list') }}">
+BC en cours
+</a>
+
+<a href="{{ path('app_profile') }}" class="active">
+Profil
+</a>
+
+</nav>
+
+<div class="sidebar__spacer"></div>
+
+<a href="{{ path('app_logout') }}" class="logout-link">
+Déconnexion
+</a>
+
+</aside>
+
+<div class="main">
+
+<div class="topbar">
+
+<div>
+
+<h1>Mes filtres</h1>
+
+<div class="topbar__sub">
+
+Gérez les critères utilisés pour rechercher les Bons de Commande.
+
+</div>
+
+</div>
+
+<div>
+
+<a href="{{ path('app_profile') }}"
+class="btn btn-outline">
+← Retour au profil
+</a>
+
+</div>
+
+</div>
+
+<div class="page">
+
+<!-- Categories -->
+
+<div class="card reveal">
+
+<div class="card__head">
+
+<h3>Catégories</h3>
+
+<a href="{{ path('app_choose_categories') }}"
+class="btn btn-outline btn-sm">
+
+Modifier
+
+</a>
+
+</div>
+
+<div class="match-tags">
+
+{% for category in categories %}
+
+<span class="match-tag">
+
+    {{ category }}
+
+    <a
+        href="{{ path('app_filter_delete', {
+            type: 'category',
+            value: category
+        }) }}"
+        class="chip-remove">
+        ✕
+    </a>
+
+</span>
+
+{% else %}
+
+<p>Aucune catégorie sélectionnée.</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+
+<!-- Nature -->
+
+<div class="card reveal" style="margin-top:20px;">
+
+<div class="card__head">
+
+<h3>Nature</h3>
+
+<a href="{{ path('app_choose_nature') }}"
+class="btn btn-outline btn-sm">
+
+Modifier
+
+</a>
+
+</div>
+
+<div class="match-tags">
+{% for nature in natures %}
+
+<span class="match-tag">
+
+    {{ nature }}
+
+    <a
+        href="{{ path('app_filter_delete', {
+            type: 'nature',
+            value: nature
+        }) }}"
+        class="chip-remove">
+        ✕
+    </a>
+
+</span>
+
+{% else %}
+
+<p>Aucune nature sélectionnée.</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+
+<!-- Cities -->
+
+<div class="card reveal" style="margin-top:20px;">
+
+<div class="card__head">
+
+<h3>Villes</h3>
+
+<a href="{{ path('app_choose_cities') }}"
+class="btn btn-outline btn-sm">
+
+Modifier
+
+</a>
+
+</div>
+
+<div class="match-tags">
+
+{% for city in cities %}
+
+<span class="match-tag">
+
+    {{ city }}
+
+    <a
+        href="{{ path('app_filter_delete', {
+            type: 'city',
+            value: city
+        }) }}"
+        class="chip-remove">
+        ✕
+    </a>
+
+</span>
+
+{% else %}
+
+<p>Aucune ville sélectionnée.</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+
+<!-- Keywords -->
+
+<div class="card reveal" style="margin-top:20px;">
+
+<div class="card__head">
+
+<h3>Mots-clés</h3>
+
+<a href="{{ path('app_choose_keywords') }}"
+class="btn btn-outline btn-sm">
+
+Modifier
+
+</a>
+
+</div>
+
+<div class="match-tags">
+
+{% for keyword in keywords %}
+
+<span class="match-tag">
+
+    {{ keyword }}
+
+    <a
+        href="{{ path('app_filter_delete', {
+            type: 'keyword',
+            value: keyword
+        }) }}"
+        class="chip-remove">
+        ✕
+    </a>
+
+</span>
+
+{% else %}
+
+<p>Aucun mot-clé sélectionné.</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/js/Scripts_more.js"></script>
+
+</body>
+
+</html>
+
+{% endblock %}

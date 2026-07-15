@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catégories — Vigie BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="/css/Style_woah.css" rel="stylesheet">
+</head>
+<body>
+<div class="onboarding" data-onboarding-step>
+
+  <div class="onboarding__top">
+    <a href="/" class="brand"><span class="brand__mark"></span> Vigie BC</a>
+    <a href="{{ path('dashboard') }}" class="onboarding__skip-all">Passer la configuration →</a>
+  </div>
+
+  {% include 'onboarding/_steps.html.twig' with {'active': 2} %}
+
+  <div class="onboarding__body">
+    <div class="wizard-card">
+      <div class="eyebrow">Étape 2 sur 5</div>
+      <h2>Quelles catégories de bons de commande suivez-vous ?</h2>
+      <p>Les catégories affinent encore le filtrage, en complément des thématiques.</p>
+
+      <form method="post" action="{{ path('app_choose_categories') }}">
+        <div class="option-grid" data-selectable>
+          {% for category in categories %}
+            <label class="option-pill">
+              <input type="checkbox" name="categories[]" value="{{ category.name }}"{% if category.name in selectedCategories %}checked{% endif %}>
+              <span class="check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span>
+              {{ category.name }}
+            </label>
+          {% else %}
+            <p style="font-size:13.5px;color:var(--ink-400);">Aucune catégorie disponible pour le moment.</p>
+          {% endfor %}
+        </div>
+        <span class="wizard-selected-count" data-selected-count>{{ selectedCategories|length }} sélections</span>
+
+        <div class="wizard-footer">
+          <a href="{{ path('app_choose_topics') }}" class="btn btn-outline">Retour</a>
+          <div style="display:flex;gap:10px;">
+            <button type="submit" name="skip" value="1" class="btn btn-ghost">Passer cette étape</button>
+            <button type="submit" class="btn btn-primary">Continuer</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+ <script src="/js/app_woah.js"></script>
+</body>
+</html>

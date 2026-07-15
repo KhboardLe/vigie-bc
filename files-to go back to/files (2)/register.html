@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Créer un compte — Vigie BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="auth">
+  <div class="auth__brand">
+    <a href="index.html" class="brand"><span class="brand__mark"></span> Vigie BC</a>
+    <div class="auth__brand-quote">
+      <p>« Configurée en cinq minutes, la surveillance tourne depuis en continu. Simple et fiable. »</p>
+      <span>— Utilisateur, société de travaux publics</span>
+    </div>
+    <svg class="auth__radar-bg" viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(92,172,238,.18)"/>
+      <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(92,172,238,.14)"/>
+      <circle cx="200" cy="200" r="70" fill="none" stroke="rgba(92,172,238,.1)"/>
+    </svg>
+  </div>
+  <div class="auth__panel">
+    <div class="auth__card">
+      <h1>Créer votre compte</h1>
+      <p>Commencez à surveiller les bons de commande en quelques secondes.</p>
+      <form data-demo-form="onboarding.html">
+        <div class="form-grid">
+          <div class="field">
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firstname" placeholder="Hiba" required>
+          </div>
+          <div class="field">
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" placeholder="Khouy" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="company">Entreprise</label>
+          <input type="text" id="company" placeholder="Nom de votre société" required>
+        </div>
+        <div class="field">
+          <label for="remail">Adresse email</label>
+          <input type="email" id="remail" placeholder="vous@entreprise.ma" required>
+        </div>
+        <div class="field">
+          <label for="rpassword">Mot de passe</label>
+          <input type="password" id="rpassword" placeholder="8 caractères minimum" required data-password-strength>
+          <div class="strength"><div class="strength__bar" data-strength-bar></div></div>
+          <div class="field-hint">Utilisez majuscules, chiffres et symboles pour plus de sécurité.</div>
+        </div>
+        <div class="field-row" style="margin-top:6px;">
+          <label class="checkbox"><input type="checkbox" required> J'accepte les <a href="#" class="link">conditions d'utilisation</a></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Créer mon compte</button>
+      </form>
+      <div class="auth__foot">Déjà inscrit ? <a href="login.html" class="link">Se connecter</a></div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

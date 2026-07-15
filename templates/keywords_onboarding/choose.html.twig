@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mots-clés — Vigie BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="/css/Style_woah.css" rel="stylesheet">
+</head>
+<body>
+<div class="onboarding" data-onboarding-step>
+
+  <div class="onboarding__top">
+    <a href="/" class="brand"><span class="brand__mark"></span> Vigie BC</a>
+    <a href="{{ path('dashboard') }}" class="onboarding__skip-all">Passer la configuration →</a>
+  </div>
+
+  {% include 'onboarding/_steps.html.twig' with {'active': 5} %}
+
+  <div class="onboarding__body">
+    <div class="wizard-card">
+      <div class="eyebrow">Étape 5 sur 5</div>
+      <h2>Ajoutez des mots-clés précis</h2>
+      <p>Affinez encore la détection avec des termes liés à votre activité.</p>
+
+      <form method="post" action="{{ path('app_choose_keywords') }}">
+        <div class="tagpicker" data-tag-picker="keywords">
+          <div class="tagpicker__input-row">
+            <input type="text" placeholder="Ajouter un mot-clé…" data-tag-input>
+            <button type="button" class="tagpicker__add" data-tag-add aria-label="Ajouter">+</button>
+          </div>
+          <div class="tagpicker__suggestions" data-tag-suggestions>
+            {% for keyword in keywords %}
+              {% if keyword.keyword not in selectedKeywords %}
+
+                <button
+    type="button"
+    class="tag-suggestion"
+    data-tag-suggestion
+    data-value="{{ keyword.keyword }}">{{ keyword.keyword }}</button>
+
+              {% endif %}
+            {% else %}
+              <span style="font-size:13px;color:var(--ink-400);">Aucun mot-clé suggéré pour le moment.</span>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="field" style="margin-top:26px;">
+          <label>Mots-clés sélectionnés</label>
+          <div class="tag-chips" data-tag-chips>
+            {% for keyword in keywords %}
+              {% if keyword.keyword in selectedKeywords %}
+                <span class="tag-chip" data-id="{{ keyword.keyword }}" data-value="{{ keyword.keyword }}">
+                  {{ keyword.keyword }}
+                  <button type="button" class="tag-chip__remove" aria-label="Retirer">✕</button>
+                  <input
+    type="hidden"
+    name="keywords[]"
+    value="{{ keyword.keyword }}">
+                </span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="field-hint">Cliquez un mot suggéré ou tapez le vôtre puis appuyez sur « + » — les nouveaux termes sont créés automatiquement.</div>
+        </div>
+
+        <div class="wizard-footer">
+          <a href="{{ path('app_choose_cities') }}" class="btn btn-outline">Retour</a>
+          <div style="display:flex;gap:10px;">
+            <button type="submit" name="skip" value="1" class="btn btn-ghost">Passer cette étape</button>
+            <button type="submit" class="btn btn-primary">Terminer la configuration</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/js/app_woah.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Alertes{% endblock %}
+
+{% block body %}
+
+<link href="/css/Styles_more.css" rel="stylesheet">
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <a href="{{ path('dashboard') }}" class="brand">
+            <span class="brand__mark"></span> Vigie BC
+        </a>
+
+        <div class="sidebar__section">Navigation</div>
+
+        <nav class="sidebar__nav">
+
+            <a href="{{ path('dashboard') }}">
+                Tableau de bord
+            </a>
+
+            <a href="{{ path('app_bc_list') }}">
+                BC en cours
+            </a>
+
+            <a href="{{ path('app_profile') }}">
+                Profil
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <div class="main">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Alertes</h1>
+
+                <div class="topbar__sub">
+
+                    {{ alerts|length }} nouvelle(s) alerte(s)
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="page">
+
+            {% if alerts is empty %}
+
+                <div class="card">
+
+                    <h2>Aucune alerte</h2>
+
+                    <p>
+                        Aucun nouveau Bon de Commande ne correspond à vos critères.
+                    </p>
+
+                </div>
+
+            {% else %}
+
+                {% for alert in alerts %}
+
+                    <div class="card" style="margin-bottom:18px;">
+
+                        <h3>{{ alert.reference }}</h3>
+
+                        <p>{{ alert.objet }}</p>
+
+                        <p>
+
+                            <strong>{{ alert.category }}</strong>
+
+                            •
+
+                            {{ alert.nature }}
+
+                            •
+
+                            {{ alert.lieu }}
+
+                        </p>
+
+                        <p>
+
+                            Date limite :
+
+                            <strong>{{ alert.date_limite }}</strong>
+
+                        </p>
+
+                        <a
+                            href="{{ alert.detail_url }}"
+                            target="_blank"
+                            class="btn btn-primary">
+
+                            Voir le BC
+
+                        </a>
+
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

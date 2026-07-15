@@ -1,0 +1,12 @@
+{# Usage: {% include 'onboarding/_steps.html.twig' with {'active': 1} %}  (active = 1..5) #}
+{% set stepLabels = ['Thématiques', 'Catégories', 'Nature', 'Villes', 'Mots-clés'] %}
+<div class="wizard-steps">
+  {% for label in stepLabels %}
+    {% set idx = loop.index %}
+    <div class="wizard-step {% if idx == active %}is-active{% elseif idx < active %}is-done{% endif %}">
+      <div class="wizard-step__dot">{{ idx }}</div>
+      <div class="wizard-step__label">{{ label }}</div>
+    </div>
+    {% if not loop.last %}<div class="wizard-step__line"></div>{% endif %}
+  {% endfor %}
+</div>

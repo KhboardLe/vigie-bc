@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil — Vigie BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="app">
+
+  <aside class="sidebar">
+    <a href="index.html" class="brand"><span class="brand__mark"></span> Vigie BC</a>
+    <div class="sidebar__section">Navigation</div>
+    <nav class="sidebar__nav">
+      <a href="dashboard.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        Tableau de bord
+      </a>
+      <a href="bc-list.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        BC en cours
+      </a>
+      <a href="keywords.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l-7-7a5 5 0 117-7 5 5 0 117 7l-7 7z"/></svg>
+        Mots-clés
+      </a>
+      <a href="alerts.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 7l-10 7L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        Alertes
+      </a>
+      <a href="profile.html" class="active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg>
+        Profil
+      </a>
+    </nav>
+    <div class="sidebar__spacer"></div>
+    <div class="sidebar__user">
+      <div class="avatar">HK</div>
+      <div><b>Hiba Khouy</b><span>hiba@entreprise.ma</span></div>
+    </div>
+    <a href="index.html" class="logout-link" style="display:flex;align-items:center;gap:12px;padding:11px 12px;font-size:13.5px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>
+      Déconnexion
+    </a>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <h1>Profil</h1>
+        <div class="topbar__sub">Gérez vos informations personnelles et votre compte.</div>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="card reveal" style="max-width:680px;">
+        <div class="profile-head">
+          <div class="avatar-lg">HK</div>
+          <div>
+            <h3 style="margin-bottom:2px;">Hiba Khouy</h3>
+            <p style="margin:0;font-size:13.5px;">Stagiaire — WEBHI Technology SARL</p>
+          </div>
+          <div style="margin-left:auto;">
+            <button class="btn btn-outline btn-sm">Changer la photo</button>
+          </div>
+        </div>
+
+        <form data-demo-form="none">
+          <div class="form-grid">
+            <div class="field">
+              <label for="pfirstname">Prénom</label>
+              <input type="text" id="pfirstname" value="Hiba">
+            </div>
+            <div class="field">
+              <label for="plastname">Nom</label>
+              <input type="text" id="plastname" value="Khouy">
+            </div>
+          </div>
+          <div class="field">
+            <label for="pcompany">Entreprise</label>
+            <input type="text" id="pcompany" value="WEBHI Technology SARL">
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="pemail">Adresse email</label>
+              <input type="email" id="pemail" value="hiba@entreprise.ma">
+            </div>
+            <div class="field">
+              <label for="pphone">Téléphone</label>
+              <input type="tel" id="pphone" value="+212 6 00 00 00 00">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+        </form>
+      </div>
+
+      <div class="card reveal" style="max-width:680px;margin-top:20px;">
+        <div class="card__head"><h3>Sécurité</h3></div>
+        <form data-demo-form="none">
+          <div class="form-grid">
+            <div class="field">
+              <label for="curpass">Mot de passe actuel</label>
+              <input type="password" id="curpass" placeholder="••••••••">
+            </div>
+            <div class="field">
+              <label for="newpass">Nouveau mot de passe</label>
+              <input type="password" id="newpass" placeholder="••••••••">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline">Mettre à jour le mot de passe</button>
+        </form>
+      </div>
+
+      <div class="card reveal" style="max-width:680px;margin-top:20px;border-color:#F3CACA;">
+        <div class="card__head"><h3 style="color:var(--danger);">Zone sensible</h3></div>
+        <p style="font-size:13.5px;">Se déconnecter de votre compte sur cet appareil.</p>
+        <a href="index.html" class="btn btn-danger-outline">Se déconnecter</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
